@@ -19,30 +19,21 @@ describe('ListProviders', () => {
 
     it('should be able to list the providers', async () => {
         const user1 = await fakeUserRepository.create({
-            name: 'Vaicai',
-            email: 'Vaicai@example.com',
+            name: 'John Doe',
+            email: 'johndoe@example.com',
             password: '123456',
-            address: 'RJ',
-            payment: 'Cartao',
-            isProvider: true
         });
 
         const user2 = await fakeUserRepository.create({
-            name: 'Vaicai2',
-            email: 'Vaicai2@example.com',
+            name: 'John Trê',
+            email: 'johntre@example.com',
             password: '123456',
-            address: 'RJ',
-            payment: 'Cartao',
-            isProvider: true
         });
 
         const loggedUser = await fakeUserRepository.create({
-            name: 'Joao',
-            email: 'joao@example.com',
+            name: 'John Doe',
+            email: 'johndoe@example.com',
             password: '123456',
-            address: 'RJ',
-            payment: 'Cartao',
-            isProvider: false
         });
 
         const providers = await listProfiles.execute({
@@ -51,4 +42,12 @@ describe('ListProviders', () => {
 
         expect(providers).toEqual([user1, user2]);
     });
+
+    // it('should not be able to show the profile from a non-existing user', async () => {
+    //     await expect(
+    //         listProfiles.execute({
+    //             user_id: 'non-existing-user_id',
+    //         }),
+    //     ).rejects.toBeInstanceOf(AppError);
+    // });
 });

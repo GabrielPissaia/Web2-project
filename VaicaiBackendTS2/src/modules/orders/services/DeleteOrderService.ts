@@ -9,10 +9,11 @@ import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICa
 
 interface IRequest {
     order_id: string;
+    provider_id: string;
 }
 
 @injectable()
-class DeleteOrderService {
+class CreateOrderService {
     constructor(
         @inject('OrdersRepository')
         private ordersRepository: IOrdersRepository,
@@ -21,10 +22,10 @@ class DeleteOrderService {
         private cacheProvider: ICacheProvider,
     ) {}
 
-    public async execute({ order_id }
-    : IRequest): Promise<void> {
+    public async execute(order_id 
+    : string): Promise<void> {
         await this.ordersRepository.delete(order_id);
     }
 }
 
-export default DeleteOrderService;
+export default CreateOrderService;

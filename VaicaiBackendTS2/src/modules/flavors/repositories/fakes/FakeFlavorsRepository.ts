@@ -30,12 +30,8 @@ class FakeFlavorsRepository implements IFlavorsRepository {
         return flavor;
     }
 
-    public async findAllFlavorsByProviderId(provider_id: string): Promise<Flavor[] | null>{
+    public async findAllFlavorsByProviderId(provider_id: string): Promise<Flavor[] | undefined>{
         return this.flavors.filter(flavor => flavor.provider_id === provider_id);
-    }
-
-    public async findFlavorById(id: string): Promise<Flavor | undefined>{
-        return this.flavors.find(flavor => flavor.id === id);
     }
 }
 

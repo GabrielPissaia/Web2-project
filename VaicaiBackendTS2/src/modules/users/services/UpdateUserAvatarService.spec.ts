@@ -20,12 +20,9 @@ describe('UpdateUserAvatar', () => {
 
     it('should be able to upload a new avatar', async () => {
         const user = await fakeUserRepository.create({
-            name: 'Joao',
-            email: 'joao@example.com',
+            name: 'John Doe',
+            email: 'johndoe@example.com',
             password: '123456',
-            address: 'RJ',
-            payment: 'Cartao',
-            isProvider: false
         });
 
         await updateUserAvatar.execute({
@@ -49,12 +46,9 @@ describe('UpdateUserAvatar', () => {
         const deleteFile = jest.spyOn(fakeStorageProvider, 'deleteFile');
 
         const user = await fakeUserRepository.create({
-            name: 'Joao',
-            email: 'joao@example.com',
+            name: 'John Doe',
+            email: 'johndoe@example.com',
             password: '123456',
-            address: 'RJ',
-            payment: 'Cartao',
-            isProvider: false
         });
 
         await updateUserAvatar.execute({

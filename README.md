@@ -1,6 +1,6 @@
 # Vaicai Documentation
 
-[via Google docs](https://docs.google.com/document/d/e/2PACX-1vRHLOQMnKJa0xQrrhDqT6xVGs7yEd2XzhMRJrJhlQ7H0iaO0lHYbvK9XCAWOZaNSwzbR85KtUD0904b/pub)
+https://docs.google.com/document/d/e/2PACX-1vRHLOQMnKJa0xQrrhDqT6xVGs7yEd2XzhMRJrJhlQ7H0iaO0lHYbvK9XCAWOZaNSwzbR85KtUD0904b/pub
 
 # Painel do cliente
 
@@ -93,6 +93,8 @@
 
 | **Iterações**   | **Testes de Unidade**   |      **Testes de Integração**      |  **Testes de Sistema** |
 |----------|:-------------:|------:|------:|
-|1ª iteração| Testes caixa preta manuais durante a primeira sprint |  N/A | Testes manuais dos casos de uso: fazer login, fazer cadastro (especificados no documento) |
-|2ª iteração| Testes automatizados com Jest |    N/A   |  Testes manuais dos casos de uso: fazer pedido, adicionar produtos (especificados no documento) |
-|3ª iteração| Testes automatizados com Jest | Teste automatizado, 70% de cobertura |  Teste manual do caso de uso geral (especificado no documento)  |
+|1ª iteração| Testes caixa preta manuais durante a primeira sprint |  N/A | Teste manual do caso de uso geral (especificado no documento) |
+|2ª iteração| Testes automatizados com Jest |    N/A   |  Testes manuais dos casos de uso: fazer login, fazer cadastro (especificados no documento)  |
+|3ª iteração| Testes automatizados com Jest | Teste automatizado, 70% de cobertura |  Testes manuais dos casos de uso: fazer pedido, adicionar produtos (especificados no documento)   |
+
+ 
