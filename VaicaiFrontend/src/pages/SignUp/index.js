@@ -33,7 +33,7 @@ const SignUp = () => {
           password: Yup.string().min(6, 'Minimo de 6 digitos'),
           address: Yup.string(),
           payment: Yup.string(),
-          pic: Yup.string(),
+          avatar: Yup.string(),
           isProvider: Yup.boolean()
         });
 
@@ -84,7 +84,7 @@ const SignUp = () => {
             />
             <Input name="address" icon={FiHome} placeholder="Endereço" />
             <Input name="payment" icon={FiDollarSign} placeholder="Pagamento" />
-            <Input name="pic" icon={FiCamera} placeholder="Foto de perfil" />
+            <Input name="avatar" icon={FiCamera} placeholder="Foto de perfil" />
             <CheckBoxInput name="isProvider" options={checkboxOptions} />
 
             <Button type="submit">Cadastrar</Button>

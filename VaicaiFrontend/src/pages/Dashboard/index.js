@@ -11,6 +11,7 @@ import {
   Section,
   Provider,
   Orders,
+  ButtonsBox
 } from './styles';
 
 import Button from '../../components/Button';
@@ -51,6 +52,7 @@ const Dashboard = () => {
 
   const handleDelete = async(order_id) => {
     await api.delete(`/pedidos/del/${order_id}`);
+
     history.push("/");
   };
 
@@ -74,9 +76,15 @@ const Dashboard = () => {
             </Profile>
 
             {user.isProvider === true && (
-              <Link to="/flavoradd">
-                <span>Cadastrar sabores</span>
-              </Link>
+              <ButtonsBox>
+                <Link to="/flavoradd">
+                  <span>Cadastrar sabores</span>
+                </Link>
+                <Link to={{
+                  pathname: "/flavors",
+                  state: { loja: user.id}
+                }}>Ver sabores cadastrados</Link>
+              </ButtonsBox>
             )}
 
             <button type="button" onClick={signOut} >
@@ -127,7 +135,7 @@ const Dashboard = () => {
                     <strong>{order.name}</strong>
                     <strong>{order.flavors}</strong>
                     <strong>{order.payment}</strong>
-                    <strong>R${order.price.toFixed(2)}</strong>
+                    <strong>R${parseFloat(order.price).toFixed(2)}</strong>
 
                   <Button onClick={() => handleDelete(order.id)}> Pedido entregue </Button>
                   </div>

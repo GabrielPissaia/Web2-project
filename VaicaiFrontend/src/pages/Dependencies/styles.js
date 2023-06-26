@@ -48,10 +48,12 @@ export const HeaderContent = styled.div`
 `;
 
 export const Content = styled.div`
-  /* Estilos do conteúdo */
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 1120px;
+  margin: 0 auto;
 `;
 
 export const DependencyList = styled.div`
@@ -249,6 +251,18 @@ export const Orders = styled.div`
       margin-left: 24px;
       color: #f4ede8;
       font-size: 20px;
+    }
+  }
+`;
+
+export const AdditionalDependencies = styled.div`
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 8px;
     }
   }
 `;

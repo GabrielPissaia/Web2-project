@@ -11,7 +11,7 @@ import {
   Section,
   Flavor,
   Counter,
-  CounterFlex,
+  CounterFlex
 } from './styles';
 import { FiArrowLeft } from 'react-icons/fi';
 import Button from '../../components/Button';
@@ -95,8 +95,6 @@ const FlavorsPage = () => {
     history.push("/");
   };
 
-  
-
   return (
     <>
       <Container>
@@ -133,7 +131,7 @@ const FlavorsPage = () => {
                 <Counter>{counter}</Counter>
                 {counter.length !== 0 && (<Button onClick={() => limparCarrinho()}>Limpar Carrinho</Button>)}
               </CounterFlex>
-
+              
               {flavors.map((flavor) => (
                 <Flavor key={flavor.id}>
                   <div>
@@ -143,7 +141,7 @@ const FlavorsPage = () => {
                     />
 
                     <strong>{flavor.name}</strong>
-                    <strong>R${flavor.price.toFixed(2)}</strong>
+                    <strong>R${parseFloat(flavor.price).toFixed(2)}</strong>
 
                     <Button onClick={() => handleCarrinho(flavor)}> Adcionar sabor </Button>
                   </div>
@@ -152,8 +150,31 @@ const FlavorsPage = () => {
             </Section>
           </List>
           )}
+          {user.isProvider === true && (
+            <List>
+            <Section>
+              {flavors.length === 0 && (
+                <p>Nenhum sorvete cadastrado.</p>
+              )}
+              
+              {flavors.map((flavor) => (
+                <Flavor key={flavor.id}>
+                  <div>
+                    <img
+                      src={flavor.pic}
+                      alt={flavor.name}
+                    />
+
+                    <strong>{flavor.name}</strong>
+                    <strong>R${parseFloat(flavor.price).toFixed(2)}</strong>
+                  </div>
+                </Flavor>
+              ))}
+            </Section>
+          </List>
+          )}
         </Content>
-        <Button onClick={() => handlePedido(provider_id, user)}> Realizar compra </Button>
+        {user.isProvider === false && (<Button onClick={() => handlePedido(provider_id, user)}> Realizar compra </Button>)}
       </Container>
     </>
   );
