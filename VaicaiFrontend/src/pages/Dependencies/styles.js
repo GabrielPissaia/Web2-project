@@ -1,28 +1,11 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-export const Container = styled.div`
-button {
-  max-width: 400px;
-  margin-left: 230px;
-}
-`;
+export const Container = styled.div``;
 
 export const Header = styled.header`
   padding: 32px 0;
   background: #ff9000;
-  a {
-    color: #fff;
-    display: block;
-    margin-right: 140px;
-    text-decoration: none;
-    transition: color 0.2s;
-    border: 0;
-    margin-left: auto;
-
-    &:hover {
-      color: ${shade(0.2, '#fff')};
-    }
 `;
 
 export const HeaderContent = styled.div`
@@ -30,6 +13,22 @@ export const HeaderContent = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+
+  > a {
+    span {
+      color: #fff;
+      margin: 5px;
+    }
+
+    margin-left: 625px;
+    border-radius: 5px;
+    height: 24px;
+    align-items: center;
+    text-decoration: none;
+    &:hover {
+      background: ${shade(0.2, '#ff9000')};
+    }
+  }
 
   > img {
     height: 80px;
@@ -41,9 +40,28 @@ export const HeaderContent = styled.div`
     border: 0;
 
     svg {
-      color: #999591;
+      color: #fff;
       width: 20px;
       height: 20px;
+    }
+  }
+`;
+
+export const Content = styled.div`
+  /* Estilos do conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export const DependencyList = styled.div`
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 8px;
     }
   }
 `;
@@ -80,19 +98,6 @@ export const Profile = styled.div`
   }
 `;
 
-export const Content = styled.main`
-  max-width: 1120px;
-  margin: 64px auto;
-  display: flex;
-
-  form {
-    align-items: center;
-    align-self: center;
-    max-width: 1120px;
-    margin-bottom: 30px;
-  }
-`;
-
 export const List = styled.div`
   flex: 1;
   margin-right: 120px;
@@ -123,12 +128,11 @@ export const List = styled.div`
   }
 `;
 
-
 export const Section = styled.section`
   margin-top: 48px;
 
   > strong {
-    color: #999591;
+    color: #fff;
     font-size: 20px;
     line-height: 26px;
     border-bottom: 1px solid #3e3b47;
@@ -138,36 +142,21 @@ export const Section = styled.section`
   }
 
   > p {
-    color: #999591;
+    color: #fff;
+  }
+
+  a {
+    text-decoration:none
   }
 `;
 
-export const Couter = styled.div`
-  display: flex;
-`;
-
-export const Flavordiv = styled.div`
-  display: flex;
-`;
-
-export const Counter = styled.div`
-  margin-left: 24px;
-  color: #f4ede8;
-  font-size: 20px;
-`;
-
-export const CounterFlex = styled.div`
-  display: flex;
-`;
-
-export const Flavor = styled.div`
+export const Provider = styled.div`
   display: flex;
   align-items: center;
   margin-bottom: 30px;
-
-  button {
-    max-width: 400px;
-    margin-left: auto;
+  
+  a {
+    text-decoration:none
   }
 
   & + div {
@@ -188,6 +177,60 @@ export const Flavor = styled.div`
   }
 
   div {
+    flex: 1;
+    background: #ff9000;
+    display: flex;
+    align-items: center;
+    padding: 16px 24px;
+    border-radius: 10px;
+    margin-left: 24px;
+
+    img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50px;
+    }
+
+    strong {
+      margin-left: 25px;
+      color: #f4ede8;
+      font-size: 20px;
+    }
+    strong + strong {
+      margin-left: auto;
+      margin-right: 100px;
+      color: #f4ede8;
+      font-size: 20px;
+    }
+  }
+`;
+
+export const Orders = styled.div`
+  display: flex;
+  align-items: center;
+
+  & + div {
+    margin-top: 16px;
+  }
+
+  span {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    color: #f4ede8;
+    width: 70px;
+
+    svg {
+      color: #ff9000;
+      margin-right: 8px;
+    }
+  }
+
+  div {
+    button {
+      width: 300px;
+      margin-left: 15px;
+    }
     flex: 1;
     background: #ff9000;
     display: flex;
