@@ -64,7 +64,7 @@ const Dashboard = () => {
       <Container>
         <Header>
           <HeaderContent>
-            <img src={logoImg} alt="Vaicai" />
+            <img src={logoImg} alt="pivete" />
 
             <Profile>
             <img src={user.avatar}

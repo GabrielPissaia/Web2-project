@@ -20,7 +20,7 @@ const Dependencies = () => {
       <Container>
         <Header>
           <HeaderContent>
-            <img src={logoImg} alt="Vaicai" />
+            <img src={logoImg} alt="pivete" />
             <Profile>
               <div>
                 <span>O que foi usado?</span>
@@ -31,10 +31,6 @@ const Dependencies = () => {
         <Content>
           <DependencyList>
             <ul>
-              <li>"@testing-library/jest-dom": "^5.11.4"</li>
-              <li>"@testing-library/react": "^11.1.0"</li>
-              <li>"@testing-library/user-event": "^12.1.10"</li>
-              <li>"@types/yup": "^0.29.14"</li>
               <li>"@unform/core": "^2.1.6"</li>
               <li>"@unform/web": "^2.1.6"</li>
               <li>"axios": "^0.21.1"</li>
@@ -54,14 +50,6 @@ const Dependencies = () => {
           </DependencyList>
           <AdditionalDependencies>
             <ul>
-              <li>"@types/bcryptjs": "^2.4.2"</li>
-              <li>"@types/express": "^4.17.6"</li>
-              <li>"@types/hapi__joi": "^17.1.0"</li>
-              <li>"@types/ioredis": "^4.16.2"</li>
-              <li>"@types/jest": "^25.2.1"</li>
-              <li>"@types/jsonwebtoken": "^8.3.9"</li>
-              <li>"@types/mongodb": "^3.5.16"</li>
-              <li>"@types/multer": "^1.4.2"</li>
               <li>"babel-plugin-transform-typescript-metadata": "^0.3.0"</li>
               <li>"eslint": "5.16.0"</li>
               <li>"eslint-config-prettier": "^6.10.1"</li>

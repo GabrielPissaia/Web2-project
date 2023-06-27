@@ -69,7 +69,7 @@ const SignUp = () => {
       <Background />
       <Content>
         <AnimationContainer>
-          <img src={logoImg} alt="Vaicai" />
+          <img src={logoImg} alt="pivete" />
 
           <Form ref={formRef} onSubmit={handleSubmit} initialData={{ isProvider: false }}>
             <h1>Crie sua conta</h1>

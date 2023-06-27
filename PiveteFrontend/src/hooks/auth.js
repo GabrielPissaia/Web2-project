@@ -5,8 +5,8 @@ const AuthContext = createContext({});
 
 export const AuthProvider = ({ children }) => {
   const [data, setData] = useState(() => {
-    const token = localStorage.getItem('@Vaicai:token');
-    const user = localStorage.getItem('@Vaicai:user');
+    const token = localStorage.getItem('@pivete:token');
+    const user = localStorage.getItem('@pivete:user');
 
     if (token && user) {
       return { token, user: JSON.parse(user) };
@@ -16,8 +16,8 @@ export const AuthProvider = ({ children }) => {
   });
 
   const signOut = useCallback(() => {
-    localStorage.removeItem('@Vaicai:token');
-    localStorage.removeItem('@Vaicai:user');
+    localStorage.removeItem('@pivete:token');
+    localStorage.removeItem('@pivete:user');
 
     setData({});
   }, []);
@@ -30,8 +30,8 @@ export const AuthProvider = ({ children }) => {
 
     const { token, user } = response.data;
 
-    localStorage.setItem('@Vaicai:token', token);
-    localStorage.setItem('@Vaicai:user', JSON.stringify(user));
+    localStorage.setItem('@pivete:token', token);
+    localStorage.setItem('@pivete:user', JSON.stringify(user));
 
     setData({ token, user });
   }, []);
