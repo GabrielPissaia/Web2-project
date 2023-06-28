@@ -8,6 +8,7 @@ import {
   Profile,
   Content,
   DependencyList,
+  Back,
 } from './styles';
 
 import logoImg from '../../assets/logo.png';
@@ -47,10 +48,12 @@ const Dependencies = () => {
             </ul>
           </DependencyList>
         </Content>
-        <Link to="/">
-            <FiLogIn />
-            Voltar ao login
+        <Back>
+          <Link to="/dependencies">
+              <FiLogIn />
+              Voltar as tecnologias
           </Link>
+        </Back>
       </Container>
     </>
   );

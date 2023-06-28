@@ -9,6 +9,7 @@ import {
   Content,
   DependencyList,
   AdditionalDependencies,
+  Back,
 } from './styles';
 
 import logoImg from '../../assets/logo.png';
@@ -40,14 +41,16 @@ const Aboutus = () => {
             <ul>
               <li>gabrielpissss@gmail.com</li>
               <br></br>
-              <li>joaoeler</li>
+              <li>mendesj@alunos.utfpr.edu.br</li>
             </ul>
           </AdditionalDependencies>
         </Content>
-        <Link to="/">
-            <FiLogIn />
-            Voltar ao login
-          </Link>
+        <Back>
+          <Link to="/dependencies">
+              <FiLogIn />
+              Voltar as tecnologias
+            </Link>
+        </Back>  
       </Container>
     </>
   );

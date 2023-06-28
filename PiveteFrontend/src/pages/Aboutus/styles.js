@@ -49,10 +49,11 @@ export const HeaderContent = styled.div`
 
 export const Content = styled.div`
   display: flex;
+  padding-top: 15%;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  max-width: 1120px;
+  max-width: 600px;
   margin: 0 auto;
 `;
 
@@ -253,6 +254,15 @@ export const Orders = styled.div`
       font-size: 20px;
     }
   }
+`;
+
+export const Back = styled.div`
+    display: flex;
+    padding-top: 15%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
 `;
 
 export const AdditionalDependencies = styled.div`

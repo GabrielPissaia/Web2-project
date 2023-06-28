@@ -10,6 +10,7 @@ import {
   DependencyList,
   AdditionalDependencies,
   ButtonsBox,
+  Back,
 } from './styles';
 
 import logoImg from '../../assets/logo.png';
@@ -73,10 +74,12 @@ const Dependencies = () => {
             </ul>
           </AdditionalDependencies>
         </Content>
-        <Link to="/">
-            <FiLogIn />
-            Voltar ao login
-          </Link>
+        <Back>
+          <Link to="/">
+              <FiLogIn />
+              Voltar ao login
+            </Link>
+        </Back>
       </Container>
     </>
   );

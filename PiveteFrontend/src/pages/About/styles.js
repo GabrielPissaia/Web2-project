@@ -253,6 +253,14 @@ export const Orders = styled.div`
   }
 `;
 
+export const Back = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+`;
+
 export const AdditionalDependencies = styled.div`
   ul {
     list-style-type: none;
