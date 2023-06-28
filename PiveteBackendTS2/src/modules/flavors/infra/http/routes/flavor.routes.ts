@@ -25,4 +25,4 @@ flavorRouter.post(
     flavorController.create,
 );
 
-export default flavorRouter;
+export default flavorRouter; 

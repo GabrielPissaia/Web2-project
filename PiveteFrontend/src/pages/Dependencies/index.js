@@ -9,6 +9,7 @@ import {
   Content,
   DependencyList,
   AdditionalDependencies,
+  ButtonsBox,
 } from './styles';
 
 import logoImg from '../../assets/logo.png';
@@ -26,6 +27,14 @@ const Dependencies = () => {
                 <span>O que foi usado?</span>
               </div>
             </Profile>
+            <ButtonsBox>
+                <Link to="/about">
+                  <span>SOBRE NÓS</span>
+                </Link>
+                <Link to={{
+                  pathname: "/aboutus",
+                }}>Converse com a gente</Link>
+              </ButtonsBox>
           </HeaderContent>
         </Header>
         <Content>

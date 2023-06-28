@@ -11,6 +11,8 @@ import Flavors from '../pages/Flavors';
 import FlavorCreation from '../pages/FlavorCreation';
 import ForgotPassword from '../pages/ForgotPassword';
 import ResetPassword from '../pages/ResetPassword';
+import About from '../pages/About';
+import Aboutus from '../pages/Aboutus'
 
 const Routes = () => {
   return (
@@ -18,8 +20,10 @@ const Routes = () => {
       <Switch>
         <Route path="/" exact component={SignIn} />
         <Route path="/signup" component={SignUp} />
-        <Route path="/dependencies" component={Dependencies}/>
 
+        <Route path="/dependencies" component={Dependencies}/>
+        <Route path="/about" component={About}/>
+        <Route path="/aboutus" component={Aboutus}/>
         <Route path="/forgot-password" component={ForgotPassword} />
         <Route path="/reset-password" component={ResetPassword} />
 
