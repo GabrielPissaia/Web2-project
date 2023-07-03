@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from 'react';
+import React, { useRef, useCallback, useState } from 'react';
 import { Form } from '@unform/web';
 import * as Yup from 'yup';
 import { Link, useHistory } from 'react-router-dom';
@@ -14,6 +14,7 @@ import { Container, Content, AnimationContainer, Background } from './styles';
 
 const SignIn = () => {
   const formRef = useRef(null);
+  const [showError, setShowError] = useState(false);
 
   const { signIn } = useAuth();
 
@@ -22,6 +23,7 @@ const SignIn = () => {
   const handleSubmit = useCallback(
     async (data) => {
       try {
+        setShowError(false);
         formRef.current?.setErrors({});
 
         const schema = Yup.object().shape({
@@ -46,12 +48,12 @@ const SignIn = () => {
           const errors = getValidationErrors(err);
 
           formRef.current?.setErrors(errors);
-
-          return;
+        } else {
+          setShowError(true);
         }
       }
     },
-    [signIn, history],
+    [signIn, history]
   );
 
   return (
@@ -72,6 +74,8 @@ const SignIn = () => {
             />
 
             <Button type="submit">Entrar</Button>
+
+            {showError && <p>Usuário ou senha incorretos.</p>}
 
             <Link to="forgot-password">Esqueci minha senha</Link>
             <Link to="dependencies">O que foi usado</Link>

@@ -19,7 +19,7 @@ export default {
     defaults: {
         from: {
             email: '',
-            name: 'Eler',
+            name: 'Gabriel',
         },
     },
 } as IMailConfig;
